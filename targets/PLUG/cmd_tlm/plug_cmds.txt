@@ -1,0 +1,16 @@
+COMMAND <%= target_name %> INFO BIG_ENDIAN "Gets the telemetry from the plug"
+  DISABLE_MESSAGES
+  APPEND_ID_PARAMETER DATA 0 STRING '{"system":{"get_sysinfo":{}}}' "Info Command to Plug"
+
+COMMAND <%= target_name %> ON BIG_ENDIAN "Turns the plug on"
+  APPEND_ID_PARAMETER DATA 0 STRING '{"system":{"set_relay_state":{"state":1}}}' "On Command to Plug"
+
+COMMAND <%= target_name %> OFF BIG_ENDIAN "Turns the plug off"
+  APPEND_ID_PARAMETER DATA 0 STRING '{"system":{"set_relay_state":{"state":0}}}' "Off Command to Plug"
+
+COMMAND <%= target_name %> LED_ON BIG_ENDIAN "Turns the plugs led on"
+  APPEND_ID_PARAMETER DATA 0 STRING '{"system":{"set_led_off":{"off":0}}}' "Info Command to Plug"
+
+COMMAND <%= target_name %> LED_OFF BIG_ENDIAN "Turns the plugs led off"
+  APPEND_ID_PARAMETER DATA 0 STRING '{"system":{"set_led_off":{"off":1}}}' "Info Command to Plug"
+

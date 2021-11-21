@@ -1,0 +1,9 @@
+VARIABLE target_name PLUG
+VARIABLE int_name PLUG_INT
+VARIABLE ip 192.168.1.0
+VARIABLE port 9999
+
+TARGET PLUG <%= target_name %>
+
+INTERFACE <%= int_name %> kasa_interface.rb <%= ip %> <%= port %>
+  MAP_TARGET <%= target_name %>

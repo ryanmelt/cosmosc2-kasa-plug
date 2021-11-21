@@ -1,0 +1,11 @@
+TELEMETRY <%= target_name %> STATUS BIG_ENDIAN "Status of the Plug"
+  APPEND_ID_ITEM PACKET_ID 8 UINT 1 "Packet Id"
+  APPEND_ITEM RELAY 8 UINT "Relay State"
+    STATE ON 1
+    STATE OFF 0
+  APPEND_ITEM LED 8 UINT "LED State"
+    STATE ON 1
+    STATE OFF 0
+
+TELEMETRY <%= target_name %> RESPONSE BIG_ENDIAN "Response from the Plug"
+  APPEND_ITEM DATA 0 STRING "Response data"

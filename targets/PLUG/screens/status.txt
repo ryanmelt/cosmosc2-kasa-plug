@@ -1,0 +1,5 @@
+SCREEN AUTO AUTO 1
+
+TITLE "<%= target_name %> STATUS"
+LABELVALUE <%= target_name %> STATUS RELAY
+LABELVALUE <%= target_name %> STATUS LED
